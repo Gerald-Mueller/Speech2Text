@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "nohup \"$CLAUDE_PROJECT_DIR/start-sp2txt.sh\" > /tmp/sp2txt.log 2>&1 &"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f /tmp/speech2text.pid ]; then kill $(cat /tmp/speech2text.pid) 2>/dev/null; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

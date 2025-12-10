@@ -1,0 +1,5 @@
+#!/bin/bash
+# Speech2Text Runner - Wird als App ausgeführt für Accessibility-Berechtigung
+
+cd /Users/geraldmuller/GitRepos/Speech2Text
+exec ./venv/bin/python -m speech2text
