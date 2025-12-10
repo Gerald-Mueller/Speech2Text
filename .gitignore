@@ -31,3 +31,4 @@ dist/
 # Local settings
 *.local
 CLAUDE.local.md
+.env
